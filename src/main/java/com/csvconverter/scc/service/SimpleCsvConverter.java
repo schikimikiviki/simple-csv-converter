@@ -24,6 +24,8 @@ public class SimpleCsvConverter {
         inputReader inputReader = new inputReader();
         List<User> userList = inputReader.readData(inputString);
 
+        // todo: use one of the outputformatters here
+
 
 
         System.out.println("I convert CSV to output format");

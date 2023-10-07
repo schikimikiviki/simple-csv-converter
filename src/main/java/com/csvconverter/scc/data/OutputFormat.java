@@ -4,7 +4,6 @@ public enum OutputFormat {
 
     JSON,
     XML,
-    CSV,
 
     TABLE
 }
