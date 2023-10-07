@@ -45,8 +45,6 @@ public class ConverterApplication {
             System.out.println("Invalid number of arguments");
         }
 
-        System.out.println("Input File: " + inputFile);
-        System.out.println("Output Format: " + outputFormat);
         return;
 
         //SpringApplication.run(ConverterApplication.class, args);

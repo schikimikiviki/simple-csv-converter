@@ -12,22 +12,15 @@ public class SimpleCsvConverter {
     public void convert (String inputString, OutputFormat outputFormat) throws IOException {
 
         if (outputFormat == null) {
-            //default
             outputFormat = OutputFormat.TABLE;
-            System.out.println("input detected, output is default");
-
-        } else {
-            System.out.println("input and output detected");
         }
 
 
         inputReader inputReader = new inputReader();
         List<User> userList = inputReader.readData(inputString);
-        System.out.println(userList);
         OutputFormatter formatter = OutputFormatterFactory.createByFormat(outputFormat);
 
-        String data = "";
-        formatter.printToConsole(data);
+        formatter.printToConsole(userList);
 
         System.out.println("Conversion complete");
     }
