@@ -6,13 +6,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
+import java.io.IOException;
 
 @SpringBootApplication
 public class ConverterApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        File inputFile = null;
+
+        String inputFile = null;
         OutputFormat outputFormat = null;
 
         SimpleCsvConverter simpleCsvConverter = new SimpleCsvConverter();
@@ -24,13 +26,13 @@ public class ConverterApplication {
 
             if (args.length == 1) {
                 // Only the input file path is defined
-                inputFile = new File(args[0]);
+                inputFile = (args[0]);
                 System.out.println("Only input file defined");
 
             }
             if (args.length == 2) {
                 // Both input file path and output format are defined
-                inputFile = new File(args[1]);
+                inputFile = (args[1]);
                 outputFormat = OutputFormat.valueOf(args[0].toUpperCase());
                 System.out.println("Both input and output files defined");
             }

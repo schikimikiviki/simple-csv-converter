@@ -1,12 +1,15 @@
 package com.csvconverter.scc.service;
 
 import com.csvconverter.scc.data.OutputFormat;
+import com.csvconverter.scc.data.User;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 public class SimpleCsvConverter {
 
-    public void convert (File file, OutputFormat outputFormat){
+    public void convert (String inputString, OutputFormat outputFormat) throws IOException {
 
         if (outputFormat == null) {
             //default
@@ -14,9 +17,12 @@ public class SimpleCsvConverter {
             System.out.println("input detected, output is default");
 
         } else {
-
             System.out.println("input and output detected");
         }
+
+
+        inputReader inputReader = new inputReader();
+        List<User> userList = inputReader.readData(inputString);
 
 
 
