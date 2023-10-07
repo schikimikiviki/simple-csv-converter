@@ -23,11 +23,12 @@ public class SimpleCsvConverter {
 
         inputReader inputReader = new inputReader();
         List<User> userList = inputReader.readData(inputString);
+        System.out.println(userList);
+        OutputFormatter formatter = OutputFormatterFactory.createByFormat(outputFormat);
 
-        // todo: use one of the outputformatters here
+        String data = "";
+        formatter.printToConsole(data);
 
-
-
-        System.out.println("I convert CSV to output format");
+        System.out.println("Conversion complete");
     }
 }

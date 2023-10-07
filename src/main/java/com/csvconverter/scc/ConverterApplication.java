@@ -25,13 +25,13 @@ public class ConverterApplication {
         } else if (args.length == 1 || args.length == 2) {
 
             if (args.length == 1) {
-                // Only the input file path is defined
+                // Only the input file path is defined, the .csv file
                 inputFile = (args[0]);
                 System.out.println("Only input file defined");
 
             }
             if (args.length == 2) {
-                // Both input file path and output format are defined
+                // Both input file path and output format are defined, first is the format, second the .csv
                 inputFile = (args[1]);
                 outputFormat = OutputFormat.valueOf(args[0].toUpperCase());
                 System.out.println("Both input and output files defined");
