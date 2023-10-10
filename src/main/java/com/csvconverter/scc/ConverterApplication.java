@@ -45,9 +45,9 @@ public class ConverterApplication {
             System.out.println("Invalid number of arguments");
         }
 
-        return;
 
-        //SpringApplication.run(ConverterApplication.class, args);
+
+        SpringApplication.run(ConverterApplication.class, args);
     }
 
 }

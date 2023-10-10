@@ -2,10 +2,11 @@ package com.csvconverter.scc.service;
 
 import com.csvconverter.scc.data.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.List;
-
+@Component
 public class JsonOutputFormatter implements OutputFormatter{
 
     @Override

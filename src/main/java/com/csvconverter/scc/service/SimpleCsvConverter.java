@@ -2,11 +2,12 @@ package com.csvconverter.scc.service;
 
 import com.csvconverter.scc.data.OutputFormat;
 import com.csvconverter.scc.data.User;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-
+@Component
 public class SimpleCsvConverter {
 
     public void convert (String inputString, OutputFormat outputFormat) throws IOException {

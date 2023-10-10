@@ -1,9 +1,11 @@
 package com.csvconverter.scc.service;
 
 import com.csvconverter.scc.data.User;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class TableOutputFormatter implements OutputFormatter {
 
 

@@ -1,6 +1,7 @@
 package com.csvconverter.scc.service;
 
 import com.csvconverter.scc.data.User;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class inputReader {
 
     public List<User> readData(String filePath) throws IOException {

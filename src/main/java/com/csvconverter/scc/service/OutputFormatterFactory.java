@@ -1,7 +1,9 @@
 package com.csvconverter.scc.service;
 
 import com.csvconverter.scc.data.OutputFormat;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OutputFormatterFactory {
 
     public static OutputFormatter createByFormat(OutputFormat outputFormat) {
